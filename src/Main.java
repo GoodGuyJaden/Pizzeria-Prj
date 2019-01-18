@@ -83,12 +83,12 @@ public class Main
 		String [] ing = {"pomodoro", "mozzarella", "salame piccante", "origano", "olio", "aglio", "acciughe", "capperi", "olive", "funghi", 
 						 "prosciutto cotto", "wurstel", "carciofi", "basilico", "gorgonzola", "scamorza", "grana", "bufala", "salsiccia", 
 						 "friarielli", "prosciutto crudo"};
-		ArrayList<String> ingredienti = new ArrayList<String>();
 		Pizza p;
 		int selezione = 0;
 		
 		for(int i = 0; i < nomi.length; i++)
 		{
+			ArrayList<String> ingredienti = new ArrayList<String>();
 			for(int j = (int)(Math.random()*4); j < 10; j++)
 			{
 				selezione = (int)(Math.random()*ing.length);
@@ -104,7 +104,7 @@ public class Main
 			//System.out.println(ingredienti);    //boh non capisco
 			p = new Pizza(nomi[i].toUpperCase(), ingredienti, (float)(Math.random()*15+5));
 			m.addNewPizza(p);
-			ingredienti.clear();
+
 		}
 		
 	}
@@ -183,7 +183,7 @@ public class Main
 		
 		prezzo =(float) (ing.size()*1.50);
 		
-		if(scelta.equals("0"))
+		if(scelta.equals("1"))
 		{
 			p = new Pizza(nome, ing, prezzo);
 		}

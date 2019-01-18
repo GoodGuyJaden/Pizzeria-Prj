@@ -55,7 +55,7 @@ public class Pizza
 	@Override
 	public String toString() 
 	{
-		return nome + "\t\t" + String.format("%.2f", prezzo) + "€\n " + ingredienti + "\n";
+		return nome + "  (" + forma + ")\t\t" + String.format("%.2f", prezzo) + "€\n " + ingredienti + "\n";
 	}
 
 	public static void main(String[] args) {
