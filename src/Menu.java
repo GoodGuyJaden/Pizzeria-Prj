@@ -6,8 +6,12 @@ public class Menu
 	
 	public boolean addNewPizza(Pizza p)
 	{		
-		menu.add(p);
-		return true;
+		if(!p.getIngredienti().isEmpty())
+		{
+			menu.add(p);
+			return true;
+		}
+		return false;
 	}
 	
 	public boolean checkNome(String nome)  //controllo il nome

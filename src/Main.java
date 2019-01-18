@@ -36,8 +36,16 @@ public class Main
 				case "0":			System.out.println(m);
 									break;
 									
-				case "1": 			m.addNewPizza(creaPizza());
-									System.out.println("Pizza aggiunta al menu");
+				case "1": 			
+					
+									if(m.addNewPizza(creaPizza()))
+									{
+										System.out.println("Pizza aggiunta al menu");
+									}
+									else
+									{
+										System.out.println("Senza ingredienti non può essere aggiunta al menu");
+									}
 									break;
 							
 	 			case "2":			System.out.println("Inserisci l'ingrediente che non vuoi");
